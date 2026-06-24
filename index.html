@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVC4600KR3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FVC4600KR3');
+  </script>
+  <!-- Amplitude -->
+  <script src="https://cdn.amplitude.com/script/f9dc8daa54abc0735b9b919cb483bb79.js"></script>
+  <script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('f9dc8daa54abc0735b9b919cb483bb79', {"fetchRemoteConfig":true,"autocapture":{"attribution":true,"fileDownloads":true,"formInteractions":true,"pageViews":true,"sessions":true,"elementInteractions":true,"networkTracking":true,"webVitals":true,"frustrationInteractions":{"thrashedCursor":true,"errorClicks":true,"deadClicks":true,"rageClicks":true}}});</script>
+
+  <title>Fundy — Startup development, done by founders</title>
+  <meta name="description" content="Fundy is a startup studio run by founders. We've launched startups, failed at some, and shipped others — and we build for founders who want it done right.">
+  <meta name="keywords" content="startup development, founders, startup studio, MVP, product development, Fundy">
+  <meta name="author" content="Fundy">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0E0718">
+  <link rel="canonical" href="https://fundy.dev/">
+
+  <!-- Structured data: read by Google Knowledge Graph and AI answer engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fundy",
+    "url": "https://fundy.dev/",
+    "logo": "https://fundy.dev/assets/og-image.png",
+    "description": "Fundy is a startup studio run by founders. We've launched startups, failed at some, and shipped others — and we build for founders who want it done right.",
+    "email": "murphywl17s@gmail.com",
+    "slogan": "Startup development, done by founders.",
+    "sameAs": ["https://www.linkedin.com/company/fundy-dev/"]
+  }
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fundy">
+  <meta property="og:title" content="Fundy — Startup development, done by founders">
+  <meta property="og:description" content="We've launched startups, failed at some, and shipped others. We know what it takes. Founders building for founders.">
+  <meta property="og:url" content="https://fundy.dev/">
+  <meta property="og:image" content="https://fundy.dev/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Fundy — Startup development, done by founders">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fundy — Startup development, done by founders">
+  <meta name="twitter:description" content="Founders building for founders. We've launched startups, failed at some, and shipped others — we know what it takes.">
+  <meta name="twitter:image" content="https://fundy.dev/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Fundy — Startup development, done by founders">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bone: #e7ded1;
+      --bone-mid: rgba(231,222,209,0.55);
+      --bone-dim: rgba(231,222,209,0.18);
+      --void: #0E0718;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      height: 100%;
+      overflow: hidden;
+      overscroll-behavior: none;
+    }
+    body {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--void);
+      color: var(--bone);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      touch-action: none;
+    }
+    canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      padding: 32px 50px;
+    }
+    .nav-inner { display: flex; align-items: center; gap: 14px; }
+    .nav-line { width: 40px; height: 1px; background: rgba(255,255,255,0.25); flex-shrink: 0; }
+    .nav-logo { font-family: var(--font-mono); font-size: 11px; letter-spacing: -0.045em; color: #ffffff; text-transform: uppercase; }
+    .hero {
+      position: relative;
+      z-index: 5;
+      height: 100vh;
+      height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 100px 50px 80px;
+      overflow: hidden;
+    }
+    .display-headline {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 8.5vw, 121px);
+      font-weight: 400;
+      line-height: 0.88;
+      letter-spacing: -0.016em;
+      color: var(--bone);
+      margin-bottom: clamp(28px, 5vw, 80px);
+    }
+    .display-headline em { font-style: italic; color: #ffffff; }
+    .hero-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 24px;
+    }
+    .meta-text {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: -0.045em;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.58);
+      text-transform: uppercase;
+      max-width: 64ch;
+    }
+    .links-row { display: flex; align-items: center; gap: 30px; }
+    .outlined-link {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: -0.045em;
+      color: var(--bone-mid);
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(231,222,209,0.4);
+      padding-bottom: 2px;
+    }
+    .outlined-link.primary {
+      color: #ffffff;
+      border-bottom-color: #ffffff;
+    }
+    .outlined-link:hover { opacity: 0.5; }
+    .footer-quote {
+      margin-top: 36px;
+      padding-top: 0;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: -0.045em;
+      color: rgba(255,255,255,0.50);
+      text-transform: uppercase;
+    }
+    /* tablet */
+    @media (max-width: 1024px) {
+      .nav { padding: 28px 36px; }
+      .hero { padding: 90px 36px 60px; }
+      .display-headline { font-size: max(52px, 7.5vw); }
+    }
+    /* mobile portrait */
+    @media (max-width: 640px) {
+      .nav { padding: 22px 24px; }
+      .hero { padding: 80px 24px 60px; }
+      .display-headline { font-size: max(36px, 10.5vw); line-height: 1.02; }
+      .links-row { gap: 20px; }
+      .footer-quote { margin-top: 20px; }
+      .meta-text { max-width: 100%; }
+    }
+    /* small mobile */
+    @media (max-width: 390px) {
+      .nav { padding: 18px 20px; }
+      .hero { padding: 70px 20px 50px; }
+      .meta-text { font-size: 10px; }
+      .footer-quote { margin-top: 16px; }
+    }
+    /* landscape short screens */
+    @media (max-height: 500px) {
+      .hero { padding: 60px 50px 30px; }
+      .display-headline { margin-bottom: 20px; }
+      .hero-meta { gap: 12px; padding-top: 14px; }
+      .footer-quote { margin-top: 12px; }
+    }
+    @media (max-height: 500px) and (max-width: 640px) {
+      .hero { padding: 60px 24px 30px; }
+      .footer-quote { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="c"></canvas>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <span class="nav-line"></span>
+      <span class="nav-logo">Fundy</span>
+    </div>
+  </nav>
+
+  <main class="hero">
+    <h1 class="display-headline">
+      Startup development,<br><em>done by founders.</em>
+    </h1>
+    <div class="hero-meta">
+      <p class="meta-text">We&#8217;ve launched startups, failed at some, and shipped others.<br>We know what it takes to get off the ground.</p>
+      <div class="links-row">
+        <a class="outlined-link primary" href="mailto:murphywl17s@gmail.com">Email us &#8594;</a>
+        <a class="outlined-link" href="https://www.linkedin.com/company/fundy-dev/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-quote">&#47;&#47; Founders building for founders.</div>
+  </main>
+
+  <script>
+  (function() {
+    var canvas = document.getElementById('c');
+    var ctx    = canvas.getContext('2d');
+    var w = 0, h = 0, dpr = 1;
+    var dots = [];
+    var t = 0;
+
+    // smoothed cursor
+    var tx = 0, ty = 0, mx = 0, my = 0;
+    var hasPointer = false;
+
+    var SPACING  = 36;
+    var REPEL_R  = 140;
+    var REPEL_F  = 90;
+    var SPRING   = 0.07;
+    var DAMP     = 0.76;
+    var AMB_AMP  = 14;     // px: ambient drift amplitude
+    var BASE_A   = 0.32;   // base dot alpha
+    var HOT_A    = 0.88;   // near-cursor alpha
+    var BASE_R   = 1.5;    // base dot radius
+    var HOT_R    = 3.8;    // near-cursor radius
+
+    function resize() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = window.innerWidth;
+      h = window.innerHeight;
+      canvas.width  = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
+      canvas.style.width  = w + 'px';
+      canvas.style.height = h + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      buildGrid();
+    }
+
+    function buildGrid() {
+      dots = [];
+      var cols = Math.ceil(w / SPACING) + 1;
+      var rows = Math.ceil(h / SPACING) + 1;
+      var ox0  = ((w - (cols - 1) * SPACING) / 2);
+      var oy0  = ((h - (rows - 1) * SPACING) / 2);
+      var jitter = SPACING * 0.75;
+      for (var r = 0; r < rows; r++) {
+        for (var c = 0; c < cols; c++) {
+          var ox = ox0 + c * SPACING + (Math.random() - 0.5) * jitter;
+          var oy = oy0 + r * SPACING + (Math.random() - 0.5) * jitter;
+          dots.push({
+            ox: ox, oy: oy,
+            x:  ox, y:  oy,
+            vx: (Math.random() - 0.5) * 2,
+            vy: (Math.random() - 0.5) * 2,
+            p1: Math.random() * Math.PI * 2,
+            p2: Math.random() * Math.PI * 2,
+            sp: 0.44 + Math.random() * 0.42
+          });
+        }
+      }
+    }
+
+    // slow organic drift per dot — each dot has its own speed and phase
+    function ambOffset(d) {
+      var s = d.sp;
+      return {
+        x: AMB_AMP * Math.sin(d.p1 + t * s)       + AMB_AMP * 0.45 * Math.sin(d.p2 * 1.5 + t * s * 0.65),
+        y: AMB_AMP * Math.cos(d.p2 + t * s * 0.8) + AMB_AMP * 0.45 * Math.cos(d.p1 * 1.3 + t * s * 0.55)
+      };
+    }
+
+    function update() {
+      t += 0.01;
+
+      // smooth cursor
+      mx += (tx - mx) * 0.10;
+      my += (ty - my) * 0.10;
+
+      for (var i = 0; i < dots.length; i++) {
+        var d = dots[i];
+        var amb = ambOffset(d);
+
+        // spring toward ambient rest position
+        var fx = (d.ox + amb.x - d.x) * SPRING;
+        var fy = (d.oy + amb.y - d.y) * SPRING;
+
+        // cursor repulsion
+        if (hasPointer || true) {           // always active (auto-roam on mobile)
+          var dx  = d.x - mx;
+          var dy  = d.y - my;
+          var d2  = dx * dx + dy * dy;
+          if (d2 < REPEL_R * REPEL_R && d2 > 0.5) {
+            var dist     = Math.sqrt(d2);
+            var falloff  = 1 - dist / REPEL_R;
+            var strength = REPEL_F * falloff * falloff;
+            fx += (dx / dist) * strength;
+            fy += (dy / dist) * strength;
+          }
+        }
+
+        d.vx = (d.vx + fx) * DAMP;
+        d.vy = (d.vy + fy) * DAMP;
+        d.x += d.vx;
+        d.y += d.vy;
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      for (var i = 0; i < dots.length; i++) {
+        var d = dots[i];
+        var dx   = d.x - mx;
+        var dy   = d.y - my;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        var prox = Math.max(0, 1 - dist / REPEL_R);
+
+        var alpha  = BASE_A + (HOT_A  - BASE_A)  * prox * prox;
+        var radius = BASE_R + (HOT_R  - BASE_R)  * prox * prox;
+
+        var pr2 = prox * prox;
+        var cr = Math.round(231 + (255 - 231) * pr2);
+        var cg = Math.round(222 + (255 - 222) * pr2);
+        var cb = Math.round(209 + (255 - 209) * pr2);
+        ctx.fillStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',' + alpha.toFixed(3) + ')';
+        ctx.beginPath();
+        ctx.arc(d.x, d.y, radius, 0, 6.2832);
+        ctx.fill();
+      }
+    }
+
+    // mobile auto-roam
+    var roamT = 0;
+    function roam() {
+      if (!hasPointer) {
+        roamT += 0.007;
+        tx = w * 0.5 + Math.cos(roamT * 0.6) * w * 0.3;
+        ty = h * 0.5 + Math.sin(roamT * 0.45) * h * 0.25;
+      }
+    }
+
+    function loop() {
+      roam();
+      update();
+      draw();
+      requestAnimationFrame(loop);
+    }
+
+    window.addEventListener('resize', resize);
+    window.addEventListener('mousemove', function(e) {
+      tx = e.clientX; ty = e.clientY; hasPointer = true;
+    });
+    window.addEventListener('mouseleave', function() { hasPointer = false; });
+    window.addEventListener('touchmove', function(e) {
+      tx = e.touches[0].clientX; ty = e.touches[0].clientY; hasPointer = true;
+    }, { passive: true });
+    window.addEventListener('touchend', function() { hasPointer = false; });
+
+    resize();
+    tx = w / 2; ty = h / 2; mx = tx; my = ty;
+    loop();
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Fundy
+
+> Startup development, done by founders. A startup studio that has launched startups, failed at some, and shipped others — building for founders who want it done right.
+
+## Contact
+- Email: murphywl17s@gmail.com
+- LinkedIn: https://www.linkedin.com/company/fundy-dev/
+
+## Site
+- [Home](https://fundy.dev/): Single-page landing — what Fundy does and how to reach us.
